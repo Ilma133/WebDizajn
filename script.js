@@ -41,7 +41,19 @@ fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food`)
                 Cijena: ${hrana.price}KM</p>
             </div>
             </div>
+            <div>
+            <button type="button" class="btn btn-danger" onclick="obrisiJelo(${hrana.id})">Izbriši</button>
+            </div>
             </div>`;
           });
     jelo.innerHTML=resultHtml;
   }
+
+  const obrisiJelo = (id) => {
+    fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food/${id}`, {
+        method: 'DELETE'
+    })
+    .then(res => {
+        console.log(res);
+    })
+}
