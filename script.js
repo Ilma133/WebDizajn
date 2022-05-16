@@ -98,3 +98,27 @@ const updateJelo = () => {
   })
 
 }
+
+const dodajJelo = () => {
+  const jelo1FormId = document.getElementById('obrok1-id').value;
+  const jelo1FormNaziv = document.getElementById('obrok1-naziv').value;
+  const jelo1FormCijena = document.getElementById('obrok1-cijena').value;
+  const jelo1FormURL = document.getElementById('obrok1-url').value;
+
+  fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food`, {
+      method:'POST',
+      headers: new Headers({
+          'Content-Type': 'application/json'
+      }),
+      body: JSON.stringify({
+        id: jelo1FormId,
+        name: jelo1FormNaziv,
+        price: jelo1FormCijena,
+        imageUrl: jelo1FormURL
+      })
+  })
+  .then(response => {
+      console.log(response);
+  })
+
+}
