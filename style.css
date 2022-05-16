@@ -120,7 +120,7 @@
   }
   
   .speciality .box-container .box{
-    flex:1 1 30rem;
+    /*flex:1 1 30rem;*/
     position: relative;
     overflow: hidden;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
@@ -166,6 +166,11 @@
     transform: translateY(100%);
   }
   
+
+ .speciality .box-container .box:hover .content h3{
+  color:white;
+  }
+
   .review .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -294,4 +299,9 @@
     html{
       font-size: 50%;
     }
+  }
+
+  .box-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
