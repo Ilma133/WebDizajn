@@ -13,3 +13,35 @@ window.onscroll = () =>{
   }
 
 }
+
+let jela = [];
+fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food`)
+  .then(response=>{
+    return response.json();
+  
+  })
+  .then(data=>{
+    jela=data;
+    renderMeals(data);
+  })
+
+  const renderMeals=(jela)=>{
+    const jelo=document.getElementsByClassName('box-container')[0];
+
+    let resultHtml='';
+
+    jela.forEach(hrana=>{
+      resultHtml+=`
+            <div class="box">
+            <div>
+            <img class="image" src="${hrana.imageUrl}" alt="">
+            <div class="content">
+                <h3>${hrana.name}</h3>
+                <p>${hrana.id} <br>
+                Cijena: ${hrana.price}KM</p>
+            </div>
+            </div>
+            </div>`;
+          });
+    jelo.innerHTML=resultHtml;
+  }
