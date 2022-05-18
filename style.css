@@ -95,6 +95,11 @@ header .logo {
   color: #666;
 }
 
+header .logo i{
+  padding-right: .5rem;
+  color:var(--red);
+}
+
 header .navbar a {
   font-size: 2rem;
   margin-left: 2rem;
@@ -136,6 +141,7 @@ header .navbar a:hover {
 .home .content h3 {
   font-size: 5rem;
   color: rgb(250, 248, 248);
+  font-weight: bold;
 }
 
 .speciality .box-container {
@@ -286,7 +292,7 @@ header .navbar a:hover {
   }
 }
 
-@media(max-width:768px){
+@media(max-width:550px){
   
     #menu-bar{
       display: initial;
