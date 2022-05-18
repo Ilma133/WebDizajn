@@ -286,7 +286,7 @@ header .navbar a:hover {
   }
 }
 
-/*@media(max-width:768px){
+@media(max-width:768px){
   
     #menu-bar{
       display: initial;
@@ -312,7 +312,7 @@ header .navbar a:hover {
       border-left:.5rem solid var(--red);
       background:#fff;
     }
-  }*/
+  }
 
 @media (max-width: 450px) {
   html {
