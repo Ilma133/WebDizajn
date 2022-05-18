@@ -150,6 +150,14 @@ header .navbar a:hover {
   gap: 1.5rem;
 }
 
+.specijalitetDiv{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
 .speciality .box-container .box {
   /*flex:1 1 30rem;*/
   position: relative;
